@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM Crafting Overzicht</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>FiveM Crafting Overzicht</h1>
+    <input type="text" id="search" placeholder="Zoek op level, item of benodigdheden..." onkeyup="filterTable()">
+    <table id="craftTable">
+        <thead>
+            <tr>
+                <th>Level</th>
+                <th>Item</th>
+                <th>Benodigdheden</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Lege fles</td><td>Glas 3x</td></tr>
+            <tr><td>1</td><td>Kampvuur Barrel</td><td>Ijzer 2x Steen 2x Houten planken 2x</td></tr>
+            <tr><td>1</td><td>Lockpick</td><td>MetaalSchroot 2x Plastic 3x</td></tr>
+            <tr><td>1</td><td>Houweel</td><td>Staal 6x Plastic 3x</td></tr>
+            <tr><td>1</td><td>Verrekijker</td><td>Glas 2x Ijzer 4x Plastic 4x</td></tr>
+            <tr><td>1</td><td>Notitieblok</td><td>Karton 1x Papierrol 5x Plastic 1x</td></tr>
+            <tr><td>1</td><td>Gieter</td><td>Ijzer 6x Plastic 4x</td></tr>
+            <tr><td>1</td><td>Waterput</td><td>Steen 15x</td></tr>
+            <tr><td>1</td><td>Tie-wraps</td><td>Plastic 6x</td></tr>
+            <tr><td>2</td><td>Goudpan</td><td>Ijzer 6x</td></tr>
+            <tr><td>3</td><td>Verband</td><td>Leer 8x</td></tr>
+            <tr><td>3</td><td>Kartonnen doos</td><td>Papierrol 6x</td></tr>
+            <tr><td>3</td><td>Papierrol</td><td>Boomschors 2x</td></tr>
+            <tr><td>3</td><td>Kabels</td><td>Koper 3x Rubber 2x</td></tr>
+            <tr><td>4</td><td>Kunstaas</td><td>Veer 1x Stuiver 1x</td></tr>
+            <tr><td>4</td><td>Kunstaas</td><td>Veer 1x Plastic schroot 2x</td></tr>
+            <tr><td>5</td><td>Gereedschapskistje</td><td>Geavanceerde lockpick 2x Plastic 8x Staal 6x</td></tr>
+            <tr><td>5</td><td>Skateboard</td><td>Rubber 8x Houten Planken 4x</td></tr>
+            <tr><td>5</td><td>Veer</td><td>Roestige Veer 3x</td></tr>
+            <tr><td>5</td><td>Veer</td><td>Roestige Tang 1x Roestige Schroevendraaier 1x</td></tr>
+            <tr><td>5</td><td>Loopstok</td><td>Plastic 2x Rubber 2x Houten Planken 5x</td></tr>
+            <tr><td>6</td><td>Documentenmap</td><td>Papierrol 8x Plastic 4x Rubber 1x</td></tr>
+            <tr><td>6</td><td>Documentenmap</td><td>Leer 4x Plastic 2x Rubber 2x</td></tr>
+            <tr><td>6</td><td>Hooivork</td><td>Ijzer 5x Rubber 1x Houten Planken 5x</td></tr>
+            <tr><td>6</td><td>Snoeischaar</td><td>Ijzer 8x Plastic 4x</td></tr>
+            <tr><td>6</td><td>Schep</td><td>Ijzer 8x Plastic 4x</td></tr>
+            <tr><td>6</td><td>Leeg Wietzakje</td><td>Plastic schroot 2x</td></tr>
+            <tr><td>7</td><td>Origami Schorpioen</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Dolfijn</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Konijn</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Leeuw</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Kalkoen</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Adelaar</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Dinosaurus</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Vlinder</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Aap</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Muis</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Valkparkiet</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Spin</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Eekhoorn</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Wolf</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Poep</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Draak</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Eenhoorn</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Varken</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Feniks</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Vliegtuig</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Origami Walvis</td><td>Papierrol 3x</td></tr>
+            <tr><td>7</td><td>Draagbare Boor</td><td>Elektronicse kit 1x Rubber 5x Staal 5x</td></tr>
+            <tr><td>7</td><td>Draagbare Lasapparaat</td><td>Koper 6x Elektronische kit 1x rubber 4x</td></tr>
+            <tr><td>7</td><td>Vloei</td><td>Boomschors 1x</td></tr>
+            <tr><td>8</td><td>Rugzak</td><td>Katoen 10x Leer 5x</td></tr>
+            <tr><td>8</td><td>Hamer Handvat</td><td>Houten Planken 6x</td></tr>
+            <tr><td>8</td><td>Kopzak</td><td>Katoen 5x Leer 2x</td></tr>
+            <tr><td>9</td><td>Zware boor</td><td>Elektronische kit 2x Draagbare boor 1x Staal 12x</td></tr>
+            <tr><td>9</td><td>Lasapparaat</td><td>Koper 6x Ijzer 6x Staal 12x</td></tr>
+            <tr><td>9</td><td>Snijmachine</td><td>Batterij 1x Rubber 3x Staal 15x Ongeslepen Diamant 2x Kabels 2x</td></tr>
+            <tr><td>9</td><td>Elektronische kit</td><td>Koper 5x Elektronischeschroot 5x Grijze chip 1x Ijzer 2x Plastic 4x Kabels 10x</td></tr>
+            <tr><td>9</td><td>Bloempot</td><td>Plastic 6x</td></tr>
+            <tr><td>9</td><td>Touw</td><td>Leer 20x</td></tr>
+            <tr><td>10</td><td>C4</td><td>Koolstof 50x Elektronischeschroot 10x Elektronische kit 2x Kabels 5x</td></tr>
+            <tr><td>10</td><td>Boorbit</td><td>Ijzer 5x</td></tr>
+            <tr><td>10</td><td>Hack Kaart</td><td>Koper 2x Elektronischeschroot 6x Groene chip 1x Plastic 6x</td></tr>
+            <tr><td>10</td><td>Mijnboor</td><td>Koper 5x Grijze Chip 1x Ijzer 18x Kabels 6x</td></tr>
+            <tr><td>10</td><td>Elektrische Zaag</td><td>Koolstof 5x Grijze chop 1x Ijzer 12x Plastic 6x</td></tr>
+            <tr><td>10</td><td>Sleutenfrequentie Radar</td><td>Blauw Chip 2x Koper 6x Elektronischeschroot 6x Ijzer 25x Plastic 8x</td></tr>
+            <tr><td>11</td><td>Duikmaster</td><td>Aluminium 8x Koolstof 6x</td></tr>
+            <tr><td>11</td><td>Duikspullen</td><td>Aluminium 6x Ijzer 3x Plastic 8x</td></tr>
+            <tr><td>11</td><td>Eierwekker</td><td>Koper 3x Elektronischeschroot 3x Kabels 5x</td></tr>
+            <tr><td>11</td><td>Buskruit</td><td>Koolstof 10x Ijzerpoeder 2x</td></tr>
+            <tr><td>11</td><td>Methtestkit</td><td>Aceton 2x Plastic 12x</td></tr>
+            <tr><td>11</td><td>Thermiet</td><td>Aluminiumpoeder 5x Koolstof 12x Elektronische kit 1x Ijzerpoeder 5x Kabels 5x</td></tr>
+            <tr><td>12</td><td>C4</td><td>Elektronischeschroot 10x Elektronische kit 1x Pijpbom 2x Kabels 5x</td></tr>
+            <tr><td>12</td><td>ActieFiguur onderdeel</td><td>Plastic 3x Rubber 1x</td></tr>
+            <tr><td>12</td><td>Decrypt-o-matic</td><td>Koper 8x Elektronischeschroot 10x Elektronische kit 1x Grijze chip 1x Ijzer 10x Moederbord 1x RFID Antenne 1x</td></tr>
+            <tr><td>12</td><td>X laptop</td><td>Koper 8x Elektronischeschroot 10x Elektronische kit 1x Ijzer 10x Laptop 1x Moederbord 1x Rode Chip 1x</td></tr>
+            <tr><td>12</td><td>X Telefoon</td><td>Koper 6x Elektronischeschroot 5x Elektronische kit 1x Groene chip 1x Ijzer 6x Telefoon 1x</td></tr>
+            <tr><td>12</td><td>Combinatietang</td><td>Aluminiumpoeder 3x Ijzer 6x Staal 4x</td></tr>
+            <tr><td>12</td><td>Combinatietang</td><td>Aluminiumpoeder 3x Ijzer 6x Staal 4x</td></tr>
+        </tbody>
+    </table>
+    <script>
+        function filterTable() {
+            let input = document.getElementById("search");
+            let filter = input.value.toUpperCase();
+            let table = document.getElementById("craftTable");
+            let tr = table.getElementsByTagName("tr");
+            
+            for (let i = 1; i < tr.length; i++) {
+                let tdLevel = tr[i].getElementsByTagName("td")[0];
+                let tdItem = tr[i].getElementsByTagName("td")[1];
+                let tdMaterials = tr[i].getElementsByTagName("td")[2];
+                if (tdLevel && tdItem && tdMaterials) {
+                    let levelText = tdLevel.textContent || tdLevel.innerText;
+                    let itemText = tdItem.textContent || tdItem.innerText;
+                    let materialsText = tdMaterials.textContent || tdMaterials.innerText;
+                    if (levelText.toUpperCase().indexOf(filter) > -1 || itemText.toUpperCase().indexOf(filter) > -1 || materialsText.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                } 
+            }
+        }
+    </script>
+</body>
+</html>
