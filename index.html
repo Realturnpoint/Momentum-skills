@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiveM Crafting Overzicht</title>
+    <title>FiveM Overzicht</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,20 +11,24 @@
             padding: 0;
             background-color: #f4f4f4;
             text-align: center;
-        }
-        h1 {
             color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1, h2 {
+            transition: color 0.3s;
         }
         input {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 20px;
-            font-size: 16px;
+            width: 50%;
+            padding: 5px;
+            margin-bottom: 5px;
+            font-size: 12px;
+            height: 25px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             background: white;
+            display: none;
         }
         th, td {
             padding: 10px;
@@ -34,11 +38,51 @@
             background: #333;
             color: white;
         }
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        .dark-mode table {
+            background: #1e1e1e;
+        }
+        .dark-mode th {
+            background: #444;
+        }
+        .toggle-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        .toggle-button {
+            padding: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .switch-button {
+            margin: 10px;
+            padding: 10px;
+            background: #555;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <h1>FiveM Crafting Overzicht</h1>
-    <input type="text" id="search" placeholder="Zoek op level, item of benodigdheden..." onkeyup="filterTable()">
+    <div class="toggle-container">
+        <button class="toggle-button" onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
+    <h1>FiveM Overzicht</h1>
+    <button class="switch-button" onclick="switchTable('craftTable')">Crafting</button>
+    <h2>Voer of Level in of Item</h2>
+    <input type="number" id="levelInput" placeholder="Voer je level in..." oninput="filterByLevel()">
+    <br>
+    <input type="text" id="itemInput" placeholder="Zoek op item..." oninput="filterByItem()">
+    <br>
     <table id="craftTable">
         <thead>
             <tr>
@@ -48,10 +92,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr><td>1</td><td>Lege fles</td><td>Glas 3x</td></tr>
-            <tr><td>1</td><td>Kampvuur Barrel</td><td>Ijzer 2x Steen 2x Houten planken 2x</td></tr>
-            <tr><td>1</td><td>Lockpick</td><td>MetaalSchroot 2x Plastic 3x</td></tr>
-            <tr><td>1</td><td>Houweel</td><td>Staal 6x Plastic 3x</td></tr>
+            <tr><td>0</td><td>Lege fles</td><td>Glas 3x</td></tr>
+            <tr><td>0</td><td>Kampvuur Barrel</td><td>Ijzer 2x Steen 2x Houten planken 2x</td></tr>
+            <tr><td>0</td><td>Lockpick</td><td>MetaalSchroot 2x Plastic 3x</td></tr>
+            <tr><td>0</td><td>Houweel</td><td>Staal 6x Plastic 3x</td></tr>
             <tr><td>1</td><td>Verrekijker</td><td>Glas 2x Ijzer 4x Plastic 4x</td></tr>
             <tr><td>1</td><td>Notitieblok</td><td>Karton 1x Papierrol 5x Plastic 1x</td></tr>
             <tr><td>1</td><td>Gieter</td><td>Ijzer 6x Plastic 4x</td></tr>
@@ -145,29 +189,48 @@
             <tr><td>21</td><td>Boor</td><td>Koper 3x Leer 6x Staal 12x</td></tr>
             <tr><td>21</td><td>Draagbaar methlab</td><td>Aceton 3x Glas 6x Plastic 8x Rubber 6x Staal 15x</td></tr>
             <tr><td>22</td><td>Mijnlaser</td><td>Elektronischeschroot 5x Elektronische kit 1x Mijnboor 1x Plastic 12x Rubber 6x</td></tr>
+            <tr><td>23</td><td>Detector Platinum</td><td>Koper 5x Elektronischeschroot 5x Grijze chip 1x Ijzer 22x Staal 12x</td></tr>
+            <tr><td>23</td><td>Metaaldetecor</td><td>Koper 5x Elektronischeschroot 5x Grijze chip 1x Ijzer 22x Staal 12x</td></tr>
+            <tr><td>23</td><td>Detector Brons</td><td>Koper 5x Elektronischeschroot 5x Grijze Chip 1x Ijzer 22x Staal 12x</td></tr>
+            <tr><td>23</td><td>Kogelwerend vest</td><td>Koolstof 3x Ijzer 12x Staal 10x</td></tr>
+            <tr><td>24</td><td>Chemische Bekerglas</td><td>Glas 6x</td></tr>
+            <tr><td>24</td><td>Hack apparaat</td><td>Elektronische kit 2x Plastic 5x Kabels 6x</td></tr>
+            <tr><td>24</td><td>Vijzel en Stamper</td><td>Plastic 3x Steen 6x</td></tr>
         </tbody>
     </table>
+
     <script>
-        function filterTable() {
-            let input = document.getElementById("search");
-            let filter = input.value.toUpperCase();
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+        function filterByLevel() {
+            let levelInput = document.getElementById("levelInput").value;
             let table = document.getElementById("craftTable");
             let tr = table.getElementsByTagName("tr");
-            
-            for (let i = 1; i < tr.length; i++) {
-                let tdLevel = tr[i].getElementsByTagName("td")[0];
-                let tdItem = tr[i].getElementsByTagName("td")[1];
-                let tdMaterials = tr[i].getElementsByTagName("td")[2];
-                if (tdLevel && tdItem && tdMaterials) {
-                    let levelText = tdLevel.textContent || tdLevel.innerText;
-                    let itemText = tdItem.textContent || tdItem.innerText;
-                    let materialsText = tdMaterials.textContent || tdMaterials.innerText;
-                    if (levelText.toUpperCase().indexOf(filter) > -1 || itemText.toUpperCase().indexOf(filter) > -1 || materialsText.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
+            if (levelInput.trim() !== "") {
+                table.style.display = "table";
+                for (let i = 1; i < tr.length; i++) {
+                    let tdLevel = tr[i].getElementsByTagName("td")[0];
+                    if (tdLevel) {
+                        let levelText = parseInt(tdLevel.textContent || tdLevel.innerText);
+                        tr[i].style.display = (levelText <= parseInt(levelInput)) ? "" : "none";
                     }
-                } 
+                }
+            } else {
+                table.style.display = "none";
+            }
+        }
+        function filterByItem() {
+            let itemInput = document.getElementById("itemInput").value.toLowerCase();
+            let table = document.getElementById("craftTable");
+            let tr = table.getElementsByTagName("tr");
+            table.style.display = "table";
+            for (let i = 1; i < tr.length; i++) {
+                let tdItem = tr[i].getElementsByTagName("td")[1];
+                if (tdItem) {
+                    let itemText = tdItem.textContent || tdItem.innerText;
+                    tr[i].style.display = (itemText.toLowerCase().includes(itemInput)) ? "" : "none";
+                }
             }
         }
     </script>
