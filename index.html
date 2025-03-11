@@ -14,8 +14,24 @@
             color: #333;
             transition: background-color 0.3s, color 0.3s;
         }
-        h1, h2 {
-            transition: color 0.3s;
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .hidden {
+            display: none;
+        }
+        .switch-button {
+            margin: 10px;
+            padding: 10px;
+            background: #555;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .dark-mode .switch-button {
+            background: #777;
         }
         input {
             width: 50%;
@@ -30,208 +46,125 @@
             background: white;
             display: none;
         }
+        .dark-mode table {
+            background: #333;
+        }
         th, td {
             padding: 10px;
             border: 1px solid #ddd;
+        }
+        .dark-mode th, .dark-mode td {
+            border: 1px solid #555;
         }
         th {
             background: #333;
             color: white;
         }
-        .dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-        .dark-mode table {
-            background: #1e1e1e;
-        }
         .dark-mode th {
             background: #444;
-        }
-        .toggle-container {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-        }
-        .toggle-button {
-            padding: 10px;
-            background: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .switch-button {
-            margin: 10px;
-            padding: 10px;
-            background: #555;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="toggle-container">
-        <button class="toggle-button" onclick="toggleDarkMode()">Dark Mode</button>
-    </div>
+    <button class="switch-button" onclick="toggleDarkMode()">Dark Mode</button>
     <h1>FiveM Overzicht</h1>
-    <button class="switch-button" onclick="switchTable('craftTable')">Crafting</button>
-    <h2>Voer of Level in of Item</h2>
-    <input type="number" id="levelInput" placeholder="Voer je level in..." oninput="filterByLevel()">
-    <br>
-    <input type="text" id="itemInput" placeholder="Zoek op item..." oninput="filterByItem()">
-    <br>
-    <table id="craftTable">
-        <thead>
-            <tr>
-                <th>Level</th>
-                <th>Item</th>
-                <th>Benodigdheden</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>0</td><td>Lege fles</td><td>Glas 3x</td></tr>
-            <tr><td>0</td><td>Kampvuur Barrel</td><td>Ijzer 2x Steen 2x Houten planken 2x</td></tr>
-            <tr><td>0</td><td>Lockpick</td><td>MetaalSchroot 2x Plastic 3x</td></tr>
-            <tr><td>0</td><td>Houweel</td><td>Staal 6x Plastic 3x</td></tr>
-            <tr><td>1</td><td>Verrekijker</td><td>Glas 2x Ijzer 4x Plastic 4x</td></tr>
-            <tr><td>1</td><td>Notitieblok</td><td>Karton 1x Papierrol 5x Plastic 1x</td></tr>
-            <tr><td>1</td><td>Gieter</td><td>Ijzer 6x Plastic 4x</td></tr>
-            <tr><td>1</td><td>Waterput</td><td>Steen 15x</td></tr>
-            <tr><td>1</td><td>Tie-wraps</td><td>Plastic 6x</td></tr>
-            <tr><td>2</td><td>Goudpan</td><td>Ijzer 6x</td></tr>
-            <tr><td>3</td><td>Verband</td><td>Leer 8x</td></tr>
-            <tr><td>3</td><td>Kartonnen doos</td><td>Papierrol 6x</td></tr>
-            <tr><td>3</td><td>Papierrol</td><td>Boomschors 2x</td></tr>
-            <tr><td>3</td><td>Kabels</td><td>Koper 3x Rubber 2x</td></tr>
-            <tr><td>4</td><td>Kunstaas</td><td>Veer 1x Stuiver 1x</td></tr>
-            <tr><td>4</td><td>Kunstaas</td><td>Veer 1x Plastic schroot 2x</td></tr>
-            <tr><td>5</td><td>Gereedschapskistje</td><td>Geavanceerde lockpick 2x Plastic 8x Staal 6x</td></tr>
-            <tr><td>5</td><td>Skateboard</td><td>Rubber 8x Houten Planken 4x</td></tr>
-            <tr><td>5</td><td>Veer</td><td>Roestige Veer 3x</td></tr>
-            <tr><td>5</td><td>Veer</td><td>Roestige Tang 1x Roestige Schroevendraaier 1x</td></tr>
-            <tr><td>5</td><td>Loopstok</td><td>Plastic 2x Rubber 2x Houten Planken 5x</td></tr>
-            <tr><td>6</td><td>Documentenmap</td><td>Papierrol 8x Plastic 4x Rubber 1x</td></tr>
-            <tr><td>6</td><td>Documentenmap</td><td>Leer 4x Plastic 2x Rubber 2x</td></tr>
-            <tr><td>6</td><td>Hooivork</td><td>Ijzer 5x Rubber 1x Houten Planken 5x</td></tr>
-            <tr><td>6</td><td>Snoeischaar</td><td>Ijzer 8x Plastic 4x</td></tr>
-            <tr><td>6</td><td>Schep</td><td>Ijzer 8x Plastic 4x</td></tr>
-            <tr><td>6</td><td>Leeg Wietzakje</td><td>Plastic schroot 2x</td></tr>
-            <tr><td>7</td><td>Origami Schorpioen</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Dolfijn</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Konijn</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Leeuw</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Kalkoen</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Adelaar</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Dinosaurus</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Vlinder</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Aap</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Muis</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Valkparkiet</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Spin</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Eekhoorn</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Wolf</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Poep</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Draak</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Eenhoorn</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Varken</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Feniks</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Vliegtuig</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Origami Walvis</td><td>Papierrol 3x</td></tr>
-            <tr><td>7</td><td>Draagbare Boor</td><td>Elektronicse kit 1x Rubber 5x Staal 5x</td></tr>
-            <tr><td>7</td><td>Draagbare Lasapparaat</td><td>Koper 6x Elektronische kit 1x rubber 4x</td></tr>
-            <tr><td>7</td><td>Vloei</td><td>Boomschors 1x</td></tr>
-            <tr><td>8</td><td>Rugzak</td><td>Katoen 10x Leer 5x</td></tr>
-            <tr><td>8</td><td>Hamer Handvat</td><td>Houten Planken 6x</td></tr>
-            <tr><td>8</td><td>Kopzak</td><td>Katoen 5x Leer 2x</td></tr>
-            <tr><td>9</td><td>Zware boor</td><td>Elektronische kit 2x Draagbare boor 1x Staal 12x</td></tr>
-            <tr><td>9</td><td>Lasapparaat</td><td>Koper 6x Ijzer 6x Staal 12x</td></tr>
-            <tr><td>9</td><td>Snijmachine</td><td>Batterij 1x Rubber 3x Staal 15x Ongeslepen Diamant 2x Kabels 2x</td></tr>
-            <tr><td>9</td><td>Elektronische kit</td><td>Koper 5x Elektronischeschroot 5x Grijze chip 1x Ijzer 2x Plastic 4x Kabels 10x</td></tr>
-            <tr><td>9</td><td>Bloempot</td><td>Plastic 6x</td></tr>
-            <tr><td>9</td><td>Touw</td><td>Leer 20x</td></tr>
-            <tr><td>10</td><td>C4</td><td>Koolstof 50x Elektronischeschroot 10x Elektronische kit 2x Kabels 5x</td></tr>
-            <tr><td>10</td><td>Boorbit</td><td>Ijzer 5x</td></tr>
-            <tr><td>10</td><td>Hack Kaart</td><td>Koper 2x Elektronischeschroot 6x Groene chip 1x Plastic 6x</td></tr>
-            <tr><td>10</td><td>Mijnboor</td><td>Koper 5x Grijze Chip 1x Ijzer 18x Kabels 6x</td></tr>
-            <tr><td>10</td><td>Elektrische Zaag</td><td>Koolstof 5x Grijze chop 1x Ijzer 12x Plastic 6x</td></tr>
-            <tr><td>10</td><td>Sleutenfrequentie Radar</td><td>Blauw Chip 2x Koper 6x Elektronischeschroot 6x Ijzer 25x Plastic 8x</td></tr>
-            <tr><td>11</td><td>Duikmaster</td><td>Aluminium 8x Koolstof 6x</td></tr>
-            <tr><td>11</td><td>Duikspullen</td><td>Aluminium 6x Ijzer 3x Plastic 8x</td></tr>
-            <tr><td>11</td><td>Eierwekker</td><td>Koper 3x Elektronischeschroot 3x Kabels 5x</td></tr>
-            <tr><td>11</td><td>Buskruit</td><td>Koolstof 10x Ijzerpoeder 2x</td></tr>
-            <tr><td>11</td><td>Methtestkit</td><td>Aceton 2x Plastic 12x</td></tr>
-            <tr><td>11</td><td>Thermiet</td><td>Aluminiumpoeder 5x Koolstof 12x Elektronische kit 1x Ijzerpoeder 5x Kabels 5x</td></tr>
-            <tr><td>12</td><td>C4</td><td>Elektronischeschroot 10x Elektronische kit 1x Pijpbom 2x Kabels 5x</td></tr>
-            <tr><td>12</td><td>ActieFiguur onderdeel</td><td>Plastic 3x Rubber 1x</td></tr>
-            <tr><td>12</td><td>Decrypt-o-matic</td><td>Koper 8x Elektronischeschroot 10x Elektronische kit 1x Grijze chip 1x Ijzer 10x Moederbord 1x RFID Antenne 1x</td></tr>
-            <tr><td>12</td><td>X laptop</td><td>Koper 8x Elektronischeschroot 10x Elektronische kit 1x Ijzer 10x Laptop 1x Moederbord 1x Rode Chip 1x</td></tr>
-            <tr><td>12</td><td>X Telefoon</td><td>Koper 6x Elektronischeschroot 5x Elektronische kit 1x Groene chip 1x Ijzer 6x Telefoon 1x</td></tr>
-            <tr><td>13</td><td>Combinatietang</td><td>Aluminiumpoeder 3x Ijzer 6x Staal 4x</td></tr>
-            <tr><td>13</td><td>Kniptang</td><td>Aluminiumpoeder 3x Ijzer 7x Staal 3x</td></tr>
-            <tr><td>14</td><td>Bijl handvat</td><td>Houten planken 6x</td></tr>
-            <tr><td>14</td><td>Grafieten hengel</td><td>Koper 2x Ijzer 5x Leer 2x</td></tr>
-            <tr><td>14</td><td>Detector Zilver</td><td>Koper 3x Elektronischeschroot 5x Grijze chip 1x Ijzer 10x Staal 5x</td></tr>
-            <tr><td>15</td><td>Gasmasker</td><td>Koolstof 6x Ijzer 5x Rubber 12x</td></tr>
-            <tr><td>15</td><td>Pincet</td><td>Staal 8x</td></tr>
-            <tr><td>16</td><td>Betonschaar</td><td>Ijzer 5x Staal 8x</td></tr>
-            <tr><td>16</td><td>Voortuig GPS Tracker</td><td>Batterij 1x Blauwe Chip 1x Elektronischeschroot 2x Plastic 3x Staal 6x Kabels 2x</td></tr>
-            <tr><td>16</td><td>Voortuig GPS Scanner</td><td>Batterij 1x Blauwe Chip 2x Elektronischeschroot 4x Plastic 5x Staal 10x Kabels 5x</td></tr>
-            <tr><td>17</td><td>Parachute</td><td>Ijzer 3x Leer 20x Plastic 10x</td></tr>
-            <tr><td>18</td><td>Licht kogelwerendplaat</td><td>Koolstof 1x IJzer 5x Staal 4x</td></tr>
-            <tr><td>18</td><td>Detector Goud</td><td>Koper 4x Elektronischeschroot 5x Grijze chip 1x Ijzer 15x Staal 8x</td></tr>
-            <tr><td>18</td><td>Kogelwerend Vest</td><td>Koolstof 6x Leer 25x Staal 12x</td></tr>
-            <tr><td>19</td><td>Voertuig GPD Hacker</td><td>Baterij 3x Koper 4x Elektronischeschroot 5x Elektronische kit 1x Moederbord 1x Kabels 12x</td></tr>
-            <tr><td>19</td><td>Voertuig Hacking Apparaat</td><td>Baterij 3x Koper 4x Elektronischeschroot 5x Elektronische kit 1x Moederbord 1x Kabels 12x</td></tr>
-            <tr><td>20</td><td>Titanium hengel</td><td>Koper 3x Leer 6x Staal 12x</td></tr>
-            <tr><td>21</td><td>Boor</td><td>Koper 3x Leer 6x Staal 12x</td></tr>
-            <tr><td>21</td><td>Draagbaar methlab</td><td>Aceton 3x Glas 6x Plastic 8x Rubber 6x Staal 15x</td></tr>
-            <tr><td>22</td><td>Mijnlaser</td><td>Elektronischeschroot 5x Elektronische kit 1x Mijnboor 1x Plastic 12x Rubber 6x</td></tr>
-            <tr><td>23</td><td>Detector Platinum</td><td>Koper 5x Elektronischeschroot 5x Grijze chip 1x Ijzer 22x Staal 12x</td></tr>
-            <tr><td>23</td><td>Metaaldetecor</td><td>Koper 5x Elektronischeschroot 5x Grijze chip 1x Ijzer 22x Staal 12x</td></tr>
-            <tr><td>23</td><td>Detector Brons</td><td>Koper 5x Elektronischeschroot 5x Grijze Chip 1x Ijzer 22x Staal 12x</td></tr>
-            <tr><td>23</td><td>Kogelwerend vest</td><td>Koolstof 3x Ijzer 12x Staal 10x</td></tr>
-            <tr><td>24</td><td>Chemische Bekerglas</td><td>Glas 6x</td></tr>
-            <tr><td>24</td><td>Hack apparaat</td><td>Elektronische kit 2x Plastic 5x Kabels 6x</td></tr>
-            <tr><td>24</td><td>Vijzel en Stamper</td><td>Plastic 3x Steen 6x</td></tr>
-        </tbody>
-    </table>
+    <button class="switch-button" onclick="toggleCrafting()">Crafting</button>
+    <button class="switch-button" onclick="toggleSlijpen()">Slijpen</button>
+    
+    <!-- Crafting Sectie -->
+    <div id="craftingSection" class="hidden">
+        <h2>Voer je Level of Item in</h2>
+        <input type="number" id="levelInput" placeholder="Voer je level in..." oninput="filterByLevel()">
+        <br>
+        <input type="text" id="itemInput" placeholder="Zoek op item..." oninput="filterByItem()">
+        <br>
+        <table id="craftTable">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Item</th>
+                    <th>Benodigdheden</th>
+                </tr>
+            </thead>
+            <tbody id="craftTableBody"></tbody>
+        </table>
+    </div>
+
+    <!-- Slijpen Sectie -->
+    <div id="slijpenSection" class="hidden">
+        <h2>Voer je Level of Item in</h2>
+        <input type="number" id="slijpenLevelInput" placeholder="Voer je level in..." oninput="filterBySlijpenLevel()">
+        <br>
+        <input type="text" id="slijpenInput" placeholder="Zoek op slijp-item..." oninput="filterBySlijpen()">
+        <br>
+        <table id="slijpenTable">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Item</th>
+                    <th>Benodigdheden</th>
+                </tr>
+            </thead>
+            <tbody id="slijpenTableBody"></tbody>
+        </table>
+    </div>
 
     <script>
+        async function loadCraftingItems() {
+            const response = await fetch('crafting-items.json');
+            const items = await response.json();
+            const tableBody = document.getElementById("craftTableBody");
+            tableBody.innerHTML = "";
+            items.forEach(item => {
+                const row = `<tr><td>${item.level}</td><td>${item.name}</td><td>${item.requirements}</td></tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+        
+        async function loadSlijpenItems() {
+            const response = await fetch('slijpen-items.json');
+            const items = await response.json();
+            const tableBody = document.getElementById("slijpenTableBody");
+            tableBody.innerHTML = "";
+            items.forEach(item => {
+                const row = `<tr><td>${item.level}</td><td>${item.name}</td><td>${item.requirements}</td></tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
         }
-        function filterByLevel() {
-            let levelInput = document.getElementById("levelInput").value;
-            let table = document.getElementById("craftTable");
-            let tr = table.getElementsByTagName("tr");
-            if (levelInput.trim() !== "") {
-                table.style.display = "table";
-                for (let i = 1; i < tr.length; i++) {
-                    let tdLevel = tr[i].getElementsByTagName("td")[0];
-                    if (tdLevel) {
-                        let levelText = parseInt(tdLevel.textContent || tdLevel.innerText);
-                        tr[i].style.display = (levelText <= parseInt(levelInput)) ? "" : "none";
-                    }
-                }
-            } else {
-                table.style.display = "none";
-            }
+
+        function toggleCrafting() {
+            document.getElementById("craftingSection").classList.toggle("hidden");
+            document.getElementById("slijpenSection").classList.add("hidden");
         }
-        function filterByItem() {
-            let itemInput = document.getElementById("itemInput").value.toLowerCase();
-            let table = document.getElementById("craftTable");
-            let tr = table.getElementsByTagName("tr");
-            table.style.display = "table";
-            for (let i = 1; i < tr.length; i++) {
-                let tdItem = tr[i].getElementsByTagName("td")[1];
-                if (tdItem) {
-                    let itemText = tdItem.textContent || tdItem.innerText;
-                    tr[i].style.display = (itemText.toLowerCase().includes(itemInput)) ? "" : "none";
-                }
-            }
+
+        function toggleSlijpen() {
+            loadSlijpenItems();
+            document.getElementById("slijpenSection").classList.toggle("hidden");
+            document.getElementById("craftingSection").classList.add("hidden");
+        }
+
+        function filterByLevel() {
+            let levelInput = parseInt(document.getElementById("levelInput").value);
+            let rows = document.querySelectorAll("#craftTable tbody tr");
+            document.getElementById("craftTable").style.display = "table";
+            rows.forEach(row => {
+                let itemLevel = parseInt(row.cells[0].textContent);
+                row.style.display = itemLevel <= levelInput ? "" : "none";
+            });
+        }
+        
+        function filterBySlijpenLevel() {
+            let levelInput = parseInt(document.getElementById("slijpenLevelInput").value);
+            let rows = document.querySelectorAll("#slijpenTable tbody tr");
+            document.getElementById("slijpenTable").style.display = "table";
+            rows.forEach(row => {
+                let itemLevel = parseInt(row.cells[0].textContent);
+                row.style.display = itemLevel <= levelInput ? "" : "none";
+            });
         }
     </script>
 </body>

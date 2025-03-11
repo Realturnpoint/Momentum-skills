@@ -1,0 +1,187 @@
+[
+    {
+        "level": 0,
+        "name": "Zilveren Oorbellen",
+        "requirements": "Zilverenstaaf 1x"
+    },
+    {
+        "level": 1,
+        "name": "Saffier",
+        "requirements": "Ongeslepen Saffier 2x"
+    },
+    {
+        "level": 2,
+        "name": "Saffier Oorbellen Zilver",
+        "requirements": "Saffier 1x, Zilveren Oorbellen 1x"
+    },
+    {
+        "level": 3,
+        "name": "Smaragden Oorbellen Zilver",
+        "requirements": "Robijn 1x, Zilveren Oorbellen 1x"
+    },
+    {
+        "level": 4,
+        "name": "Robijnen Oorbellen Zilver",
+        "requirements": "Robijn 1x, Zilveren Oorbellen 1x"
+    },
+    {
+        "level": 6,
+        "name": "Smaragd",
+        "requirements": "Ongeslepen Smaragd 2x"
+    },
+    {
+        "level": 7,
+        "name": "Gouden Oorbellen",
+        "requirements": "Goudstaaf 1x"
+    },
+    {
+        "level": 8,
+        "name": "Saffieren Oorbellen",
+        "requirements": "Gouden oorbellen 1x, Saffier 1x"
+    },
+    {
+        "level": 9,
+        "name": "Smaragd Oorbellen",
+        "requirements": "Smaragd 1x, Gouden Oorbellen 1x"
+    },
+    {
+        "level": 10,
+        "name": "Robijnen Oorbellen",
+        "requirements": "Gouden Oorbellen 1x, Robijn 1x"
+    },
+    {
+        "level": 11,
+        "name": "Diamanten Oorbellen",
+        "requirements": "Diamant 1x, Gouden Oorbellen 1x"
+    },
+    {
+        "level": 12,
+        "name": "Robijn",
+        "requirements": "Ongeslepen robijnen 2x"
+    },
+    {
+        "level": 13,
+        "name": "Diamant",
+        "requirements": "Ongeslepen diamenten 2x"
+    },
+    {
+        "level": 14,
+        "name": "Aluminiumpoeder",
+        "requirements": "Aluminium 2x, Koolstof 1x"
+    },
+    {
+        "level": 15,
+        "name": "Ijzerpoeder",
+        "requirements": "Ijzer 3x, Koolstof 1x"
+    },
+    {
+        "level": 16,
+        "name": "Kogelhuls",
+        "requirements": "Aluminiumpoeder 1x, Koper 14x, Staal 2x"
+    },
+    {
+        "level": 16,
+        "name": "Zilveren ketting",
+        "requirements": "Zilverenstaaf 2x"
+    },
+    {
+        "level": 17,
+        "name": "Saffieren Ketting Zilver",
+        "requirements": "Saffier 1x, Zilveren ketting 1x"
+    },
+    {
+        "level": 18,
+        "name": "Smaragden Ketting Zilver",
+        "requirements": "Smaragd 1x, Zilveren ketting 1x"
+    },
+    {
+        "level": 19,
+        "name": "Robijn Ketting Zilver",
+        "requirements": "Robijn 1x, Zilveren ketting 1x"
+    },
+    {
+        "level": 20,
+        "name": "Diamenten Ketting Zilver",
+        "requirements": "Diamant 1x, Zilveren ketting 1x"
+    },
+    {
+        "level": 21,
+        "name": "Gouden Ketting",
+        "requirements": "Goudstaaf 2x"
+    },
+    {
+        "level": 21,
+        "name": "10 Karaat Gouden Ketting",
+        "requirements": "Goudstaaf 4x"
+    },
+    {
+        "level": 22,
+        "name": "Saffieren Ketting",
+        "requirements": "Gouden Ketting 1x, Saffier 1x"
+    },
+    {
+        "level": 23,
+        "name": "Smaragd Ketting",
+        "requirements": "Gouden Ketting 1x, Smaragd 1x"
+    },
+    {
+        "level": 24,
+        "name": "Robijnen Ketting",
+        "requirements": "Gouden Ketting 1x, Robijn 1x"
+    },
+    {
+        "level": 25,
+        "name": "Diamanten Ketting",
+        "requirements": "Gouden Ketting 1x, Diamant 1x"
+    },
+    {
+        "level": 26,
+        "name": "Zilveren Ring",
+        "requirements": "Zilverenstaaf 3x"
+    },
+    {
+        "level": 27,
+        "name": "Saffieren Ring Zilver",
+        "requirements": "Saffier 1x, Zilveren ring 1x"
+    },
+    {
+        "level": 28,
+        "name": "Smaragd Ring Zilver",
+        "requirements": "Smaragd 1x, Zilveren ring 1x"
+    },
+    {
+        "level": 29,
+        "name": "Robijnen Ring Zilver",
+        "requirements": "Robijn 1x, Zilveren ring 1x"
+    },
+    {
+        "level": 30,
+        "name": "Diamanten Ring Zilver",
+        "requirements": "Diamanten 1x, Zilveren ring 1x"
+    },
+    {
+        "level": 31,
+        "name": "Gouden Ring",
+        "requirements": "Goudstaaf 3x"
+    },
+    {
+        "level": 32,
+        "name": "Saffieren ring",
+        "requirements": "Gouden ring 1x, Saffier 1x"
+    },
+    {
+        "level": 33,
+        "name": "Smaragd Ring",
+        "requirements": "Gouden ring 1x, Smaragd 1x"
+    },
+    {
+        "level": 34,
+        "name": "Robijnen Ring",
+        "requirements": "Gouden ring 1x, Robijn 1x"
+    },
+    {
+        "level": 35,
+        "name": "Diamanten Ring",
+        "requirements": "Gouden ring 1x, Diamanten 1x"
+    }
+]
