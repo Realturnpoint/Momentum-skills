@@ -74,9 +74,10 @@
     <!-- Crafting Sectie -->
     <div id="craftingSection" class="hidden">
         <h2>Voer je Level of Item in</h2>
-        <input type="number" id="levelInput" placeholder="Voer je level in..." oninput="filterByLevel()">
+        <input type="number" id="levelInput" placeholder="Voer je level in..." oninput="filterCraftingTable()">
         <br>
-        <input type="text" id="itemInput" placeholder="Zoek op item..." oninput="filterByItem()">
+        <input type="text" id="benodigdhedenInput" placeholder="Zoek op benodigdheden..." oninput="filterCraftingTable()">
+
         <br>
         <table id="craftTable">
             <thead>
@@ -93,9 +94,10 @@
     <!-- Slijpen Sectie -->
     <div id="slijpenSection" class="hidden">
         <h2>Voer je Level of Item in</h2>
-        <input type="number" id="slijpenLevelInput" placeholder="Voer je level in..." oninput="filterBySlijpenLevel()">
+        <input type="number" id="slijpenLevelInput" placeholder="Voer je level in..." oninput="filterSlijpenTable()">
         <br>
-        <input type="text" id="slijpenInput" placeholder="Zoek op slijp-item..." oninput="filterBySlijpen()">
+        <input type="text" id="slijpenBenodigdhedenInput" placeholder="Zoek op benodigdheden..." oninput="filterSlijpenTable()">
+
         <br>
         <table id="slijpenTable">
             <thead>
@@ -136,6 +138,44 @@
             document.body.classList.toggle("dark-mode");
         }
 
+        function filterCraftingTable() {
+            let levelInput = document.getElementById("levelInput").value;
+            let benodigdhedenInput = document.getElementById("benodigdhedenInput").value.toLowerCase();
+    
+            let rows = document.querySelectorAll("#craftTable tbody tr");
+            document.getElementById("craftTable").style.display = "table"; // Zorg dat de tabel zichtbaar is
+
+            rows.forEach(row => {
+            let itemLevel = parseInt(row.cells[0].textContent);
+            let benodigdheden = row.cells[2].textContent.toLowerCase(); // Pak de derde kolom (benodigdheden)
+
+            let matchLevel = levelInput === "" || itemLevel <= parseInt(levelInput);
+            let matchBenodigdheden = benodigdhedenInput === "" || benodigdheden.includes(benodigdhedenInput);
+
+            row.style.display = (matchLevel && matchBenodigdheden) ? "" : "none";
+        });
+    }
+
+    function filterSlijpenTable() {
+    let levelInput = document.getElementById("slijpenLevelInput").value;
+    let benodigdhedenInput = document.getElementById("slijpenBenodigdhedenInput").value.toLowerCase();
+    
+    let rows = document.querySelectorAll("#slijpenTable tbody tr");
+    document.getElementById("slijpenTable").style.display = "table";
+
+    rows.forEach(row => {
+        let itemLevel = parseInt(row.cells[0].textContent);
+        let benodigdheden = row.cells[2].textContent.toLowerCase(); // Pak de derde kolom (benodigdheden)
+
+        let matchLevel = levelInput === "" || itemLevel <= parseInt(levelInput);
+        let matchBenodigdheden = benodigdhedenInput === "" || benodigdheden.includes(benodigdhedenInput);
+
+        row.style.display = (matchLevel && matchBenodigdheden) ? "" : "none";
+    });
+}
+
+
+
         function toggleCrafting() {
             loadCraftingItems();
             document.getElementById("craftingSection").classList.toggle("hidden");
@@ -157,6 +197,16 @@
                 row.style.display = itemLevel <= levelInput ? "" : "none";
             });
         }
+
+        function filterByItem() {
+        let itemInput = document.getElementById("itemInput").value.toLowerCase();
+        let rows = document.querySelectorAll("#craftTable tbody tr");
+        document.getElementById("craftTable").style.display = "table";
+        rows.forEach(row => {
+            let itemName = row.cells[1].textContent.toLowerCase();
+            row.style.display = itemName.includes(itemInput) ? "" : "none";
+        });
+    }
         
         function filterBySlijpenLevel() {
             let levelInput = parseInt(document.getElementById("slijpenLevelInput").value);
