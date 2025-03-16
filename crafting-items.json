@@ -7,32 +7,32 @@
     {
         "level": 0,
         "name": "Kampvuur Barrel",
-        "requirments": "Ijzer 2x Steen 2x Houten planken 2x"
+        "requirments": "Ijzer 2x, Steen 2x, Houten planken 2x"
     },
     {
         "level": 0,
         "name": "Lockpick",
-        "requirments": "MetaalSchroot 2x Plastic 3x"
+        "requirments": "MetaalSchroot 2x, Plastic 3x"
     },
     {
         "level": 0,
         "name": "Houweel",
-        "requirments": "Staal 6x Plastic 3x"
+        "requirments": "Staal 6x, Plastic 3x"
     },
     {
         "level": 1,
         "name": "Verrekijker",
-        "requirments": "Glas 2x Ijzer 4x Plastic 4x"
+        "requirments": "Glas 2x, Ijzer 4x, Plastic 4x"
     },
     {
         "level": 1,
         "name": "Notitieblok",
-        "requirments": "Karton 1x Papierrol 5x Plastic 1x"
+        "requirments": "Karton 1x, Papierrol 5x, Plastic 1x"
     },
     {
         "level": 1,
         "name": "Gieter",
-        "requirments": "Ijzer 6x Plastic 4x"
+        "requirments": "Ijzer 6x, Plastic 4x"
     },
     {
         "level": 1,
@@ -67,27 +67,27 @@
     {
         "level": 3,
         "name": "Kabels",
-        "requirments": "Koper 3x Rubber 2x"
+        "requirments": "Koper 3x, Rubber 2x"
     },
     {
         "level": 4,
         "name": "Kunstaas",
-        "requirments": "Veer 1x Stuiver 1x"
+        "requirments": "Veer 1x, Stuiver 1x"
     },
     {
         "level": 4,
         "name": "Kunstaas",
-        "requirments": "Veer 1x Plastic schroot 2x"
+        "requirments": "Veer 1x, Plastic schroot 2x"
     },
     {
         "level": 5,
         "name": "Gereedschapskistje",
-        "requirments": "Geavanceerde lockpick 2x Plastic 8x Staal 6x"
+        "requirments": "Geavanceerde lockpick 2x, Plastic 8x, Staal 6x"
     },
     {
         "level": 5,
         "name": "Skateboard",
-        "requirments": "Rubber 8x Houten Planken 4x"
+        "requirments": "Rubber 8x, Houten Planken 4x"
     },
     {
         "level": 5,
@@ -97,37 +97,37 @@
     {
         "level": 5,
         "name": "Veer",
-        "requirments": "Roestige Tang 1x Roestige Schroevendraaier 1x"
+        "requirments": "Roestige Tang 1x, Roestige Schroevendraaier 1x"
     },
     {
         "level": 5,
         "name": "Loopstok",
-        "requirments": "Plastic 2x Rubber 2x Houten Planken 5x"
+        "requirments": "Plastic 2x, Rubber 2x, Houten Planken 5x"
     },
     {
         "level": 6,
         "name": "Documentenmap",
-        "requirments": "Papierrol 8x Plastic 4x Rubber 1x"
+        "requirments": "Papierrol 8x, Plastic 4x, Rubber 1x"
     },
     {
         "level": 6,
         "name": "Documentenmap",
-        "requirments": "Leer 4x Plastic 2x Rubber 2x"
+        "requirments": "Leer 4x, Plastic 2x, Rubber 2x"
     },
     {
         "level": 6,
         "name": "Hooivork",
-        "requirments": "Ijzer 5x Rubber 1x Houten Planken 5x"
+        "requirments": "Ijzer 5x, Rubber 1x, Houten Planken 5x"
     },
     {
         "level": 6,
         "name": "Snoeischaar",
-        "requirments": "Ijzer 8x Plastic 4x"
+        "requirments": "Ijzer 8x, Plastic 4x"
     },
     {
         "level": 6,
         "name": "Schep",
-        "requirments": "Ijzer 8x Plastic 4x"
+        "requirments": "Ijzer 8x, Plastic 4x"
     },
     {
         "level": 6,
@@ -242,12 +242,12 @@
     {
         "level": 7,
         "name": "Draagbare Boor",
-        "requirments": "Elektronicse kit 1x Rubber 5x Staal 5x"
+        "requirments": "Elektronicse kit 1x, Rubber 5x, Staal 5x"
     },
     {
         "level": 7,
         "name": "Draagbare Lasapparaat",
-        "requirments": "Koper 6x Elektronische kit 1x rubber 4x"
+        "requirments": "Koper 6x, Elektronische kit 1x, rubber 4x"
     },
     {
         "level": 7,
@@ -257,7 +257,7 @@
     {
         "level": 7,
         "name": "Rugzak",
-        "requirments": "Katoen 10x Leer 5x"
+        "requirments": "Katoen 10x, Leer 5x"
     },
     {
         "level": 8,
@@ -267,27 +267,27 @@
     {
         "level": 8,
         "name": "Kopzak",
-        "requirments": "Katoen 5x Leer 2x"
+        "requirments": "Katoen 5x, Leer 2x"
     },
     {
         "level": 9,
         "name": "Zware boor",
-        "requirments": "Elektronische kit 2x Draagbare boor 1x Staal 12x"
+        "requirments": "Elektronische kit 2x, Draagbare boor 1x, Staal 12x"
     },
     {
         "level": 9,
         "name": "Lasapparaat",
-        "requirments": "Koper 6x Ijzer 6x Staal 12x"
+        "requirments": "Koper 6x, Ijzer 6x, Staal 12x"
     },
     {
         "level": 9,
         "name": "Snijmachine",
-        "requirments": "Batterij 1x Rubber 3x Staal 15x Ongeslepen Diamant 2x Kabels 2x"
+        "requirments": "Batterij 1x, Rubber 3x Staal 15x, Ongeslepen Diamant 2x, Kabels 2x"
     },
     {
         "level": 9,
         "name": "Elektronische kit",
-        "requirments": "Koper 5x Elektronischeschroot 5x Grijze chip 1x Ijzer 2x Plastic 4x Kabels 10x"
+        "requirments": "Koper 5x, Elektronischeschroot 5x, Grijze chip 1x, Ijzer 2x, Plastic 4x, Kabels 10x"
     },
     {
         "level": 9,
@@ -302,7 +302,7 @@
     {
         "level": 10,
         "name": "C4",
-        "requirments": "Koolstof 50x Elektronischeschroot 10x Elektronische kit 2x Kabels 5x"
+        "requirments": "Koolstof 50x, Elektronischeschroot 10x, Elektronische kit 2x, Kabels 5x"
     },
     {
         "level": 10,
@@ -312,87 +312,87 @@
     {
         "level": 10,
         "name": "Hack Kaart",
-        "requirments": "Koper 2x Elektronischeschroot 6x Groene chip 1x Plastic 6x"
+        "requirments": "Koper 2x, Elektronischeschroot 6x, Groene chip 1x, Plastic 6x"
     },
     {
         "level": 10,
         "name": "Mijnboor",
-        "requirments": "Koper 5x Grijze Chip 1x Ijzer 18x Kabels 6x"
+        "requirments": "Koper 5x, Grijze Chip 1x, Ijzer 18x, Kabels 6x"
     },
     {
         "level": 10,
         "name": "Elektrische Zaag",
-        "requirments": "Koolstof 5x Grijze chop 1x Ijzer 12x Plastic 6x"
+        "requirments": "Koolstof 5x, Grijze chop 1x, Ijzer 12x, Plastic 6x"
     },
     {
         "level": 10,
         "name": "Sleutenfrequentie Radar",
-        "requirments": "Blauw Chip 2x Koper 6x Elektronischeschroot 6x Ijzer 25x Plastic 8x"
+        "requirments": "Blauw Chip 2x, Koper 6x, Elektronischeschroot 6x, Ijzer 25x Plastic 8x"
     },
     {
         "level": 11,
         "name": "Duikmaster",
-        "requirments": "Aluminium 8x Koolstof 6x"
+        "requirments": "Aluminium 8x, Koolstof 6x"
     },
     {
         "level": 11,
         "name": "Duikspullen",
-        "requirments": "Aluminium 6x Ijzer 3x Plastic 8x"
+        "requirments": "Aluminium 6x, Ijzer 3x, Plastic 8x"
     },
     {
         "level": 11,
         "name": "Eierwekker",
-        "requirments": "Koper 3x Elektronischeschroot 3x Kabels 5x"
+        "requirments": "Koper 3x, Elektronischeschroot 3x, Kabels 5x"
     },
     {
         "level": 11,
         "name": "Buskruit",
-        "requirments": "Koolstof 10x Ijzerpoeder 2x"
+        "requirments": "Koolstof 10x, Ijzerpoeder 2x"
     },
     {
         "level": 11,
         "name": "Methtestkit",
-        "requirments": "Aceton 2x Plastic 12x"
+        "requirments": "Aceton 2x, Plastic 12x"
     },
     {
         "level": 11,
         "name": "Thermiet",
-        "requirments": "Aluminiumpoeder 5x Koolstof 12x Elektronische kit 1x Ijzerpoeder 5x Kabels 5x"
+        "requirments": "Aluminiumpoeder 5x, Koolstof 12x, Elektronische kit 1x, Ijzerpoeder 5x Kabels 5x"
     },
     {
         "level": 12,
         "name": "C4",
-        "requirments": "Elektronischeschroot 10x Elektronische kit 1x Pijpbom 2x Kabels 5x"
+        "requirments": "Elektronischeschroot 10x, Elektronische kit 1x, Pijpbom 2x Kabels 5x"
     },
     {
         "level": 12,
         "name": "ActieFiguur onderdeel",
-        "requirments": "Plastic 3x Rubber 1x"
+        "requirments": "Plastic 3x, Rubber 1x"
     },
     {
         "level": 12,
         "name": "Decrypt-o-matic",
-        "requirments": "Koper 8x Elektronischeschroot 10x Elektronische kit 1x Grijze chip 1x Ijzer 10x Moederbord 1x RFID Antenne 1x"
+        "requirments": "Koper 8x, Elektronischeschroot 10x, Elektronische kit 1x, Grijze chip 1x, Ijzer 10x, Moederbord 1x, RFID Antenne 1x"
     },
     {
         "level": 12,
         "name": "X laptop",
-        "requirments": "Koper 8x Elektronischeschroot 10x Elektronische kit 1x Ijzer 10x Laptop 1x Moederbord 1x Rode Chip 1x"
+        "requirments": "Koper 8x, Elektronischeschroot 10x, Elektronische kit 1x, Ijzer 10x, Laptop 1x, Moederbord 1x, Rode Chip 1x"
     },
     {
         "level": 12,
         "name": "X Telefoon",
-        "requirments": "Koper 6x Elektronischeschroot 5x Elektronische kit 1x Groene chip 1x Ijzer 6x Telefoon 1x"
+        "requirments": "Koper 6x, Elektronischeschroot 5x, Elektronische kit 1x, Groene chip 1x, Ijzer 6x, Telefoon 1x"
     },
     {
         "level": 13,
         "name": "Combinatietang",
-        "requirments": "Aluminiumpoeder 3x Ijzer 6x Staal 4x"
+        "requirments": "Aluminiumpoeder 3x, Ijzer 6x Staal 4x"
     },
     {
         "level": 13,
         "name": "Kniptang",
-        "requirments": "Aluminiumpoeder 3x Ijzer 7x Staal 3x"
+        "requirments": "Aluminiumpoeder 3x, Ijzer 7x Staal 3x"
     },
     {
         "level": 14,
@@ -402,17 +402,17 @@
     {
         "level": 14,
         "name": "Grafieten hengel",
-        "requirments": "Koper 2x Ijzer 5x Leer 2x"
+        "requirments": "Koper 2x, Ijzer 5x, Leer 2x"
     },
     {
         "level": 14,
         "name": "Detector Zilver",
-        "requirments": "Koper 3x Elektronischeschroot 5x Grijze chip 1x Ijzer 10x Staal 5x"
+        "requirments": "Koper 3x, Elektronischeschroot 5x, Grijze chip 1x, Ijzer 10x, Staal 5x"
     },
     {
         "level": 15,
         "name": "Gasmasker",
-        "requirments": "Koolstof 6x Ijzer 5x Rubber 12x"
+        "requirments": "Koolstof 6x, Ijzer 5x, Rubber 12x"
     },
     {
         "level": 15,
@@ -422,87 +422,87 @@
     {
         "level": 16,
         "name": "Betonschaar",
-        "requirments": "Ijzer 5x Staal 8x"
+        "requirments": "Ijzer 5x, Staal 8x"
     },
     {
         "level": 16,
         "name": "Voertuig GPS Tracker",
-        "requirments": "Batterij 1x Blauwe Chip 1x Elektronischeschroot 2x Plastic 3x Staal 6x Kabels 2x"
+        "requirments": "Batterij 1x, Blauwe Chip 1x, Elektronischeschroot 2x, Plastic 3x, Staal 6x, Kabels 2x"
     },
     {
         "level": 16,
         "name": "Voertuig GPS Scanner",
-        "requirments": "Batterij 1x Blauwe Chip 2x Elektronischeschroot 4x Plastic 5x Staal 10x Kabels 5x"
+        "requirments": "Batterij 1x, Blauwe Chip 2x, Elektronischeschroot 4x, Plastic 5x, Staal 10x, Kabels 5x"
     },
     {
         "level": 17,
         "name": "Parachute",
-        "requirments": "Ijzer 3x Leer 20x Plastic 10x"
+        "requirments": "Ijzer 3x, Leer 20x, Plastic 10x"
     },
     {
         "level": 18,
         "name": "Licht kogelwerendplaat",
-        "requirments": "Koolstof 1x IJzer 5x Staal 4x"
+        "requirments": "Koolstof 1x, IJzer 5x, Staal 4x"
     },
     {
         "level": 18,
         "name": "Detector Goud",
-        "requirments": "Koper 4x Elektronischeschroot 5x Grijze chip 1x Ijzer 15x Staal 8x"
+        "requirments": "Koper 4x, Elektronischeschroot 5x, Grijze chip 1x, Ijzer 15x, Staal 8x"
     },
     {
         "level": 18,
         "name": "Kogelwerend Vest",
-        "requirments": "Koolstof 6x Leer 25x Staal 12x"
+        "requirments": "Koolstof 6x, Leer 25x Staal 12x"
     },
     {
         "level": 19,
         "name": "Voertuig GPD Hacker",
-        "requirments": "Baterij 3x Koper 4x Elektronischeschroot 5x Elektronische kit 1x Moederbord 1x Kabels 12x"
+        "requirments": "Baterij 3x, Koper 4x, Elektronischeschroot 5x, Elektronische kit 1x, Moederbord 1x, Kabels 12x"
     },
     {
         "level": 19,
         "name": "Voertuig Hacking Apparaat",
-        "requirments": "Baterij 3x Koper 4x Elektronischeschroot 5x Elektronische kit 1x Moederbord 1x Kabels 12x"
+        "requirments": "Baterij 3x, Koper 4x, Elektronischeschroot 5x, Elektronische kit 1x, Moederbord 1x, Kabels 12x"
     },
     {
         "level": 20,
         "name": "Titanium hengel",
-        "requirments": "Koper 3x Leer 6x Staal 12x"
+        "requirments": "Koper 3x, Leer 6x, Staal 12x"
     },
     {
         "level": 21,
         "name": "Boor",
-        "requirments": "Koper 3x Leer 6x Staal 12x"
+        "requirments": "Koper 3x, Leer 6x, Staal 12x"
     },
     {
         "level": 21,
         "name": "Draagbaar methlab",
-        "requirments": "Aceton 3x Glas 6x Plastic 8x Rubber 6x Staal 15x"
+        "requirments": "Aceton 3x, Glas 6x, Plastic 8x, Rubber 6x, Staal 15x"
     },
     {
         "level": 22,
         "name": "Mijnlaser",
-        "requirments": "Elektronischeschroot 5x Elektronische kit 1x Mijnboor 1x Plastic 12x Rubber 6x"
+        "requirments": "Elektronischeschroot 5x, Elektronische kit 1x, Mijnboor 1x, Plastic 12x, Rubber 6x"
     },
     {
         "level": 23,
         "name": "Detector Platinum<",
-        "requirments": "Koper 5x Elektronischeschroot 5x Grijze chip 1x Ijzer 22x Staal 12x"
+        "requirments": "Koper 5x, Elektronischeschroot 5x, Grijze chip 1x, Ijzer 22x, Staal 12x"
     },
     {
         "level": 23,
         "name": "Metaaldetecor",
-        "requirments": "Koper 5x Elektronischeschroot 5x Grijze chip 1x Ijzer 22x Staal 12x"
+        "requirments": "Koper 5x, Elektronischeschroot 5x, Grijze chip 1x, Ijzer 22x Staal 12x"
     },
     {
         "level": 23,
         "name": "Detector Brons",
-        "requirments": "Koper 5x Elektronischeschroot 5x Grijze Chip 1x Ijzer 22x Staal 12x"
+        "requirments": "Koper 5x, Elektronischeschroot 5x, Grijze Chip 1x, Ijzer 22x, Staal 12x"
     },
     {
         "level": 23,
         "name": "Kogelwerend vest",
-        "requirments": "Koolstof 3x Ijzer 12x Staal 10x"
+        "requirments": "Koolstof 3x, Ijzer 12x, Staal 10x"
     },
     {
         "level": 24,
@@ -517,7 +517,7 @@
     {
         "level": 24,
         "name": "Vijzel en Stamper",
-        "requirments": "Plastic 3x Steen 6x"
+        "requirments": "Plastic 3x, Steen 6x"
     }
     
 ]
