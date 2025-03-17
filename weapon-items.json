@@ -1,0 +1,97 @@
+[
+    {
+        "level": 0,
+        "name": "Gebroken fles",
+        "requirments": "Lege fles 2x"
+    },
+    {
+        "level": 1,
+        "name": "Candy Cane",
+        "requirments": "Voedselkleurstof 5x suiker 50x"
+    },
+    {
+        "level": 2,
+        "name": "Pool Cue",
+        "requirments": "Houten Planken 6x"
+    },
+    {
+        "level": 3,
+        "name": "Boks beugel",
+        "requirments": "Koper 5x, Ijzer 2x, Staal 2x"
+    },
+    {
+        "level": 4,
+        "name": "Stone hatchet",
+        "requirments": "Bijl handvat 1x, Steen 10x"
+    },
+    {
+        "level": 5,
+        "name": "Golf Club",
+        "requirments": "Ijzer 10x, Rubber 2x, Staal 4x"
+    },
+    {
+        "level": 6,
+        "name": "Koevoet",
+        "requirments": "Ijzer 8x, Staal 5x"
+    },
+    {
+        "level": 7,
+        "name": "MOersleutel",
+        "requirments": "Ijzer 8x, Staal 5x"
+    },
+    {
+        "level": 8,
+        "name": "Hamer",
+        "requirments": "Hamer handvat 1x, Ijzer 15x"
+    },
+    {
+        "level": 9,
+        "name": "Mes",
+        "requirments": "Ijzer 10x, Plastic 4x, Rubber 1x"
+    },
+    {
+        "level": 10,
+        "name": "Hatchet",
+        "requirments": "Bijl handvat 1x, ijzer 10x, staal 2x"
+    },
+    {
+        "level": 11,
+        "name": "MAchete",
+        "requirments": "ijzer 15x, Leer 10x, Plastic 5x"
+    },
+    {
+        "level": 12,
+        "name": "Munitiebox .45",
+        "requirments": ".45 ACP 12x, Karton 4x, Buskruit 10x"
+    },
+    {
+        "level": 12,
+        "name": "Munitiebox 9mm",
+        "requirments": "9mm 12x, Karton 2x, Buskruit 5x"
+    },
+    {
+        "level": 12,
+        "name": "SNS Pistol",
+        "requirments": "Ijzerpoeder 10x, SNS pistool Clip 1x, SNS Pistool Grip 1x SNS pistool Loop 1x"
+    },
+    {
+        "level": 15,
+        "name": "VFP-9 Pistool",
+        "requirments": "Aluminiumpoeder 2x, Ijzerpoeder 8x, VFP-9 Pistool Clip 1x, VFP-9 Pistool Grip 1x, VFP-9 Pistool Loop 1x"
+    },
+    {
+        "level": 15,
+        "name": "Retro pistool",
+        "requirments": "Aluminiumpoeder 10x, Ijzerpoeder 5x, Retro pistool Clip 1x, Retro pistool Grip 1x, Retro pistool Loop 1x"
+    },
+    {
+        "level": 16,
+        "name": "SNS Pistool MK2",
+        "requirments": "SNS Pistool 1x, Conversiekit .45 1x"
+    },
+    {
+        "level": 17,
+        "name": "Zwaar Pistool",
+        "requirments": "Zware Pistool Loop 1x, Zware Pistool Clip 1x, Zware Pistool Grip 1x, Ijzerpoeder 5x, Staal 10x"
+    }
+]

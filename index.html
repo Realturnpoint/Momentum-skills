@@ -70,6 +70,7 @@
     <h1>Momentum Overzicht</h1>
     <button class="switch-button" onclick="toggleCrafting()">Crafting</button>
     <button class="switch-button" onclick="toggleSlijpen()">Slijpen</button>
+    <button class="switch-button" onclick="toggleWeapon()">Weapon</button>
     
     <!-- Crafting Sectie -->
     <div id="craftingSection" class="hidden">
@@ -111,6 +112,26 @@
         </table>
     </div>
 
+    <!-- Weapon Sectie -->
+    <div id="weaponSection" class="hidden">
+        <h2>Voer je Level of Item in</h2>
+        <input type="number" id="weaponLevelInput" placeholder="Voer je level in..." oninput="filterWeaponTable()">
+        <br>
+        <input type="text" id="weaponBenodigdhedenInput" placeholder="Zoek op benodigdheden..." oninput="filterWeaponTable()">
+
+        <br>
+        <table id="weaponTable">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Item</th>
+                    <th>Benodigdheden</th>
+                </tr>
+            </thead>
+            <tbody id="weaponTableBody"></tbody>
+        </table>
+    </div>
+
     <script>
         async function loadCraftingItems() {
             const response = await fetch('crafting-items.json');
@@ -134,6 +155,17 @@
             });
         }
 
+        async function loadWeaponItems() {
+            const response = await fetch('weapon-items.json');
+            const items = await response.json();
+            const tableBody = document.getElementById("weaponTableBody");
+            tableBody.innerHTML = "";
+            items.forEach(item => {
+                const row = `<tr><td>${item.level}</td><td>${item.name}</td><td>${item.requirments}</td></tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
         }
@@ -144,6 +176,24 @@
     
             let rows = document.querySelectorAll("#craftTable tbody tr");
             document.getElementById("craftTable").style.display = "table"; // Zorg dat de tabel zichtbaar is
+
+            rows.forEach(row => {
+            let itemLevel = parseInt(row.cells[0].textContent);
+            let benodigdheden = row.cells[2].textContent.toLowerCase(); // Pak de derde kolom (benodigdheden)
+
+            let matchLevel = levelInput === "" || itemLevel <= parseInt(levelInput);
+            let matchBenodigdheden = benodigdhedenInput === "" || benodigdheden.includes(benodigdhedenInput);
+
+            row.style.display = (matchLevel && matchBenodigdheden) ? "" : "none";
+        });
+    }
+
+    function filterWeaponTable() {
+            let levelInput = document.getElementById("levelInput").value;
+            let benodigdhedenInput = document.getElementById("benodigdhedenInput").value.toLowerCase();
+    
+            let rows = document.querySelectorAll("#weaponTable tbody tr");
+            document.getElementById("weaponTable").style.display = "table"; // Zorg dat de tabel zichtbaar is
 
             rows.forEach(row => {
             let itemLevel = parseInt(row.cells[0].textContent);
@@ -180,12 +230,21 @@
             loadCraftingItems();
             document.getElementById("craftingSection").classList.toggle("hidden");
             document.getElementById("slijpenSection").classList.add("hidden");
+            document.getElementById("weaponSection").classList.add("hidden");
         }
 
         function toggleSlijpen() {
             loadSlijpenItems();
             document.getElementById("slijpenSection").classList.toggle("hidden");
             document.getElementById("craftingSection").classList.add("hidden");
+            document.getElementById("weaponSection").classList.add("hidden");
+        }
+
+        function toggleWeapon() {
+            loadWeaponItems();
+            document.getElementById("weaponSection").classList.toggle("hidden");
+            document.getElementById("craftingSection").classList.add("hidden");
+            document.getElementById("slijpenSection").classList.add("hidden");
         }
 
         function filterByLevel() {
@@ -212,6 +271,16 @@
             let levelInput = parseInt(document.getElementById("slijpenLevelInput").value);
             let rows = document.querySelectorAll("#slijpenTable tbody tr");
             document.getElementById("slijpenTable").style.display = "table";
+            rows.forEach(row => {
+                let itemLevel = parseInt(row.cells[0].textContent);
+                row.style.display = itemLevel <= levelInput ? "" : "none";
+            });
+        }
+
+        function filterByWeaponLevel() {
+            let levelInput = parseInt(document.getElementById("weaponLevelInput").value);
+            let rows = document.querySelectorAll("#weaponTable tbody tr");
+            document.getElementById("weaponTable").style.display = "table";
             rows.forEach(row => {
                 let itemLevel = parseInt(row.cells[0].textContent);
                 row.style.display = itemLevel <= levelInput ? "" : "none";
